@@ -1,28 +1,26 @@
-name: GitHub Pages
+name: Deploy MkDocs Site
 
 on:
   push:
     branches:
-      - main  # Ana branch "main" değilse "master" yazabilirsin.
+      - main  # Eğer branch'in farklıysa, burayı değiştir
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Install MkDocs
-        run: |
-          pip install mkdocs  # MkDocs'u kuruyoruz
+      - name: Install dependencies
+        run: pip install mkdocs-material pymdown-extensions
 
-      - name: Build the site
-        run: |
-          mkdocs build  # MkDocs build komutuyla siteyi oluşturuyoruz
+      - name: Build MkDocs site
+        run: mkdocs build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site  # MkDocs'un oluşturduğu "site" klasörünü deploy ediyoruz
+          publish_dir: ./site
