@@ -77,6 +77,9 @@ Several factors influence the projectile’s range:
 This theoretical foundation forms the basis for further numerical simulations and real-world applications of projectile motion.
 
 # Analysis of the Range
+ 
+![alt text](image.png)
+
 
 ## Dependence of the Horizontal Range on the Projection Angle
 The horizontal range of a projectile is a function of its initial velocity, launch angle, and gravitational acceleration. The range $R$ can be expressed as:
@@ -155,6 +158,8 @@ These factors make the analysis of projectile motion more complex and require ad
 
 # Practical Applications
 
+![alt text](image-2.png)
+
 ## Sports
 
 ### Soccer
@@ -227,6 +232,8 @@ Uneven terrain can also affect the application of the projectile motion model. T
 In engineering, missile and water jet trajectory predictions must incorporate terrain data to ensure accuracy. Similarly, in sports like golf, terrain features such as elevation differences or wind gusts caused by nearby mountains can change how the ball behaves.
 
 # Implementation
+
+![alt text](image-3.png)
 
 ## Python Script for Simulating Projectile Motion
 
@@ -325,6 +332,8 @@ plot_range_vs_angle(v0, angles)
 
 # 7. Limitations and Extensions
 
+![alt text](image-4.png)
+
 ## Limitations of the Idealized Model
 
 The theoretical model presented in previous sections assumes ideal conditions, which may not fully represent real-world scenarios. Some of the key limitations of the idealized model are:
@@ -380,5 +389,7 @@ In some situations, such as sports, real-time adjustments to the launch angle or
 ## Conclusion
 
 The idealized model of projectile motion provides a good starting point for understanding the basic principles of motion under constant acceleration. However, to apply it to real-world scenarios, we must extend it by incorporating factors such as air resistance, terrain variations, and non-uniform gravitational fields. Using advanced methods such as machine learning and real-time adjustments can also improve the model’s accuracy and applicability in fields like sports, engineering, and space exploration.
+
+
 
 
