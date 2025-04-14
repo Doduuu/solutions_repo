@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 2 - Physics and Mathematics</title>
+<title>Problem 2: Investigating the Dynamics of a Forced Damped Pendulum - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 2";
+        var mkdocs_page_name = "Problem 2: Investigating the Dynamics of a Forced Damped Pendulum";
         var mkdocs_page_input_path = "1 Physics/1 Mechanics/Problem_2.md";
         var mkdocs_page_url = null;
       </script>
@@ -48,8 +48,26 @@
 <ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../Problem_1/">Problem 1</a>
 </li>
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2: Investigating the Dynamics of a Forced Damped Pendulum</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation:</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task">Task:</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-theoretical-foundation">1. Theoretical Foundation:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-analysis-of-dynamics">2. Analysis of Dynamics:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-practical-applications">3. Practical Applications:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#4-implementation">4. Implementation:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deliverables">Deliverables:</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hints-and-resources">Hints and Resources:</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +181,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">1 Mechanics</li>
-<li class="breadcrumb-item active">Problem 2</li>
+<li class="breadcrumb-item active">Problem 2: Investigating the Dynamics of a Forced Damped Pendulum</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,7 +189,65 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-2">Problem 2</h1>
+<h1 id="problem-2-investigating-the-dynamics-of-a-forced-damped-pendulum">Problem 2: Investigating the Dynamics of a Forced Damped Pendulum</h1>
+<h2 id="motivation">Motivation:</h2>
+<p>The <strong>forced damped pendulum</strong> is a captivating example of a physical system with intricate behavior resulting from the interplay of <strong>damping</strong>, <strong>restoring forces</strong>, and <strong>external driving forces</strong>. By introducing both damping and external periodic forcing, the system demonstrates a transition from <strong>simple harmonic motion</strong> to a rich spectrum of dynamics, including <strong>resonance</strong>, <strong>chaos</strong>, and <strong>quasiperiodic behavior</strong>. These phenomena serve as a foundation for understanding complex real-world systems, such as driven oscillators, climate systems, and mechanical structures under periodic stress.</p>
+<p>Adding forcing introduces new parameters, such as the <strong>amplitude</strong> and <strong>frequency</strong> of the external force, which significantly affect the pendulum's behavior. By systematically varying these parameters, a diverse class of solutions can be observed, including synchronized oscillations, chaotic motion, and resonance phenomena. These behaviors not only highlight fundamental physics principles but also provide insights into engineering applications such as <strong>energy harvesting</strong>, <strong>vibration isolation</strong>, and <strong>mechanical resonance</strong>.</p>
+<h2 id="task">Task:</h2>
+<h3 id="1-theoretical-foundation">1. Theoretical Foundation:</h3>
+<ul>
+<li>
+<p>Start with the differential equation governing the motion of a <strong>forced damped pendulum</strong>:
+  $$
+  \frac{d^2 \theta}{dt^2} + 2 \gamma \frac{d\theta}{dt} + \omega_0^2 \sin(\theta) = A \cos(\omega t)
+  $$</p>
+</li>
+<li>
+<p>Derive the approximate solutions for <strong>small-angle oscillations</strong>.</p>
+</li>
+<li>Explore <strong>resonance conditions</strong> and their implications for the system's energy.</li>
+</ul>
+<h3 id="2-analysis-of-dynamics">2. Analysis of Dynamics:</h3>
+<ul>
+<li>Investigate how the <strong>damping coefficient</strong>, <strong>driving amplitude</strong>, and <strong>driving frequency</strong> influence the motion of the pendulum.</li>
+<li>Examine the <strong>transition between regular and chaotic motion</strong> and their physical interpretations.</li>
+</ul>
+<h3 id="3-practical-applications">3. Practical Applications:</h3>
+<ul>
+<li>Discuss real-world scenarios where the <strong>forced damped pendulum</strong> model applies, such as in <strong>energy harvesting devices</strong>, <strong>suspension bridges</strong>, and <strong>oscillating circuits</strong>.</li>
+</ul>
+<h3 id="4-implementation">4. Implementation:</h3>
+<ul>
+<li>Create a <strong>computational model</strong> to simulate the motion of a <strong>forced damped pendulum</strong>.</li>
+<li>Visualize the behavior under various <strong>damping</strong>, <strong>driving force</strong>, and <strong>initial conditions</strong>.</li>
+<li>Plot <strong>phase diagrams</strong> and <strong>Poincaré sections</strong> to illustrate transitions to chaos.</li>
+</ul>
+<h2 id="deliverables">Deliverables:</h2>
+<ul>
+<li>A <strong>Markdown document</strong> with <strong>Python script</strong> or notebook implementing the simulations.</li>
+<li>A detailed explanation of the general solutions for the <strong>forced damped pendulum</strong>.</li>
+<li><strong>Graphical representations</strong> of the motion for different <strong>damping coefficients</strong>, <strong>driving amplitudes</strong>, and <strong>driving frequencies</strong>, including resonance and chaotic behavior.</li>
+<li>A discussion on the <strong>limitations of the model</strong> and potential extensions, such as introducing <strong>nonlinear damping</strong> or <strong>non-periodic driving forces</strong>.</li>
+<li><strong>Phase portraits</strong>, <strong>Poincaré sections</strong>, and <strong>bifurcation diagrams</strong> to analyze transitions to complex dynamics.</li>
+</ul>
+<h2 id="hints-and-resources">Hints and Resources:</h2>
+<ul>
+<li>For small angles, approximate <span class="arithmatex">\(\sin(\theta) \approx \theta\)</span> to simplify the differential equation.</li>
+<li>Employ <strong>numerical techniques</strong> (e.g., <strong>Runge-Kutta methods</strong>) for exploring the dynamics beyond the small-angle approximation.</li>
+<li>Relate the <strong>forced damped pendulum</strong> to analogous systems in other fields, such as <strong>electrical circuits</strong> (driven RLC circuits) or <strong>biomechanics</strong> (human gait).</li>
+<li>Utilize software tools like <strong>Python</strong> for simulations and visualizations.</li>
+</ul>
+<p>This task bridges theoretical analysis with computational exploration, fostering a deeper understanding of forced and damped oscillatory phenomena and their implications in both physics and engineering.</p>
+<h1 id="pendulum-system-diagram-introduction">Pendulum System Diagram (Introduction)</h1>
+<p><img alt="alt text" src="../image-8.png"/></p>
+<h1 id="displacement-vs-time-plot-for-small-angle-oscillations-theoretical-foundation">Displacement vs. Time Plot for Small-Angle Oscillations (Theoretical Foundation)</h1>
+<p><img alt="alt text" src="../image-9.png"/></p>
+<h1 id="resonance-curve-amplitude-vs-driving-frequency">Resonance Curve (Amplitude vs. Driving Frequency)</h1>
+<p><img alt="alt text" src="../image-10.png"/></p>
+<p># Phase Portrait (Displacement vs. Velocity)
+<img alt="alt text" src="../image-11.png"/></p>
+<h1 id="poincare-section-chaotic-vs-periodic-motion">Poincaré Section (Chaotic vs. Periodic Motion)</h1>
+<p><img alt="alt text" src="../image-12.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
