@@ -8,6 +8,9 @@ Adding forcing introduces new parameters, such as the **amplitude** and **freque
 ## Task:
 
 ### 1. Theoretical Foundation:
+
+![Teoretcal Foundation](image-3.png) 
+
 - Start with the differential equation governing the motion of a **forced damped pendulum**:
   $$
   \frac{d^2 \theta}{dt^2} + 2 \gamma \frac{d\theta}{dt} + \omega_0^2 \sin(\theta) = A \cos(\omega t)
@@ -16,12 +19,19 @@ Adding forcing introduces new parameters, such as the **amplitude** and **freque
 - Derive the approximate solutions for **small-angle oscillations**.
 - Explore **resonance conditions** and their implications for the system's energy.
 
+ ![Teoretical Foundation](image-4.png)
+
 ### 2. Analysis of Dynamics:
+![alt text](image-6.png)
 - Investigate how the **damping coefficient**, **driving amplitude**, and **driving frequency** influence the motion of the pendulum.
 - Examine the **transition between regular and chaotic motion** and their physical interpretations.
+![alt text](image-5.png)
 
 ### 3. Practical Applications:
+
 - Discuss real-world scenarios where the **forced damped pendulum** model applies, such as in **energy harvesting devices**, **suspension bridges**, and **oscillating circuits**.
+![alt text](image-7.png) ![alt text](image-8.png)
+
 
 ### 4. Implementation:
 - Create a **computational model** to simulate the motion of a **forced damped pendulum**.
@@ -43,17 +53,9 @@ Adding forcing introduces new parameters, such as the **amplitude** and **freque
 
 This task bridges theoretical analysis with computational exploration, fostering a deeper understanding of forced and damped oscillatory phenomena and their implications in both physics and engineering.
 
-# Pendulum System Diagram (Introduction)
-![alt text](image-8.png)
+![alt text](image-9.png) ![alt text](image-10.png)
 
-# Displacement vs. Time Plot for Small-Angle Oscillations (Theoretical Foundation)
-![alt text](image-9.png)
 
-# Resonance Curve (Amplitude vs. Driving Frequency)
-![alt text](image-10.png)
 
- # Phase Portrait (Displacement vs. Velocity)
-![alt text](image-11.png)
 
-# Poincaré Section (Chaotic vs. Periodic Motion)
-![alt text](image-12.png)
+[My Colab](https://colab.research.google.com/drive/1qP4dBedUpvvfWsVxY26c0vqmXayg90XI#scrollTo=G9rPV8yD-MIY)
