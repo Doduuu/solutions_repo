@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 2 - Physics and Mathematics</title>
+<title>Escape Velocities and Cosmic Velocities - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 2";
+        var mkdocs_page_name = "Escape Velocities and Cosmic Velocities";
         var mkdocs_page_input_path = "1 Physics/2 Gravity/Problem_2.md";
         var mkdocs_page_url = null;
       </script>
@@ -54,13 +54,27 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">2 Gravity</a>
 <ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../Problem_1/">Problem 1: Orbital Period and Orbital Radius (Kepler's Third Law)</a>
 </li>
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Escape Velocities and Cosmic Velocities</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#derivation-of-cosmic-velocities">Derivation of Cosmic Velocities</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-first-cosmic-velocity-orbital-velocity">1. First Cosmic Velocity (Orbital Velocity)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-second-cosmic-velocity-escape-velocity">2. Second Cosmic Velocity (Escape Velocity)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-third-cosmic-velocity-escape-from-the-solar-system">3. Third Cosmic Velocity (Escape from the Solar System)</a>
+</li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Problem_3/">Problem 3</a>
+<li class="toctree-l3"><a class="reference internal" href="#calculation-of-cosmic-velocities-for-earth">Calculation of Cosmic Velocities for Earth</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Problem_3/">Problem 3: Trajectories of a Freely Released Payload Near Earth</a>
 </li>
 </ul>
 </li>
@@ -163,7 +177,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">2 Gravity</li>
-<li class="breadcrumb-item active">Problem 2</li>
+<li class="breadcrumb-item active">Escape Velocities and Cosmic Velocities</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,12 +185,114 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-2">Problem 2</h1>
+<h1 id="escape-velocities-and-cosmic-velocities">Escape Velocities and Cosmic Velocities</h1>
+<h2 id="introduction">Introduction</h2>
+<p>In space exploration, understanding the escape velocity and cosmic velocities is crucial to designing space missions. These velocities define the conditions needed to break free from the gravitational influence of celestial bodies. The <strong>first</strong>, <strong>second</strong>, and <strong>third cosmic velocities</strong> determine whether an object can:</p>
+<ol>
+<li><strong>Orbit</strong> the body (first cosmic velocity),</li>
+<li><strong>Escape</strong> from the gravitational pull (second cosmic velocity), or</li>
+<li><strong>Leave</strong> the gravitational influence of the star system entirely (third cosmic velocity).</li>
+</ol>
+<hr/>
+<h2 id="derivation-of-cosmic-velocities">Derivation of Cosmic Velocities</h2>
+<h3 id="1-first-cosmic-velocity-orbital-velocity">1. <strong>First Cosmic Velocity (Orbital Velocity)</strong></h3>
+<p>The <strong>first cosmic velocity</strong> is the velocity required for an object to enter a circular orbit around a celestial body. It is derived from the balance between the object's centripetal force and the gravitational force pulling it toward the body.</p>
+<p><strong>Formula:</strong></p>
+<p>The centripetal force required to maintain a circular orbit is given by:</p>
+<div class="arithmatex">\[ F_{c} = \frac{m v^2}{r} \]</div>
+<p>The gravitational force is:</p>
+<div class="arithmatex">\[ F_{g} = \frac{G M m}{r^2} \]</div>
+<p>Where:
+- <span class="arithmatex">\( m \)</span> is the mass of the orbiting object,
+- <span class="arithmatex">\( M \)</span> is the mass of the central body (e.g., Earth),
+- <span class="arithmatex">\( r \)</span> is the distance from the center of the body,
+- <span class="arithmatex">\( G \)</span> is the gravitational constant,
+- <span class="arithmatex">\( v \)</span> is the orbital velocity.</p>
+<p>Setting <span class="arithmatex">\( F_c = F_g \)</span> gives:</p>
+<div class="arithmatex">\[ \frac{m v^2}{r} = \frac{G M m}{r^2} \]</div>
+<p>Solving for <span class="arithmatex">\( v \)</span>, we get the first cosmic velocity:</p>
+<div class="arithmatex">\[ v_1 = \sqrt{\frac{GM}{r}} \]</div>
+<h3 id="2-second-cosmic-velocity-escape-velocity">2. <strong>Second Cosmic Velocity (Escape Velocity)</strong></h3>
+<p>The <strong>second cosmic velocity</strong> is the velocity required for an object to escape the gravitational pull of the body without further propulsion. It is derived from the conservation of energy principle.</p>
+<p>The total energy of the system consists of kinetic energy and gravitational potential energy:</p>
+<div class="arithmatex">\[ E = \frac{1}{2} m v^2 - \frac{G M m}{r} \]</div>
+<p>For an object to escape, the total energy must be zero (i.e., the object just escapes without falling back):</p>
+<div class="arithmatex">\[ 0 = \frac{1}{2} m v^2 - \frac{G M m}{r} \]</div>
+<p>Solving for <span class="arithmatex">\( v \)</span>, we get the second cosmic velocity:</p>
+<div class="arithmatex">\[ v_2 = \sqrt{\frac{2GM}{r}} \]</div>
+<h3 id="3-third-cosmic-velocity-escape-from-the-solar-system">3. <strong>Third Cosmic Velocity (Escape from the Solar System)</strong></h3>
+<p>The <strong>third cosmic velocity</strong> is the velocity required to escape the gravitational influence of a star (e.g., the Sun) and travel into interstellar space. It is derived from the total energy needed to escape the combined gravitational fields of the central body and the star.</p>
+<p>For an object to escape the solar system from the surface of a planet, it must overcome the gravitational influence of both the planet and the Sun.</p>
+<p>The third cosmic velocity is given by:</p>
+<div class="arithmatex">\[ v_3 = \sqrt{\frac{3GM_{\text{sun}}}{r_{\text{earth}}}} \]</div>
+<p>Where:
+- <span class="arithmatex">\( G \)</span> is the gravitational constant,
+- <span class="arithmatex">\( M_{\text{sun}} \)</span> is the mass of the Sun,
+- <span class="arithmatex">\( r_{\text{earth}} \)</span> is the distance from the Earth to the Sun.</p>
+<hr/>
+<h2 id="calculation-of-cosmic-velocities-for-earth">Calculation of Cosmic Velocities for Earth</h2>
+<p><img alt="alt text" src="../image-3.png"/></p>
+<p>Given the following constants:
+- Gravitational constant <span class="arithmatex">\( G = 6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2} \)</span>,
+- Earth's mass <span class="arithmatex">\( M_{\text{earth}} = 5.972 \times 10^{24} \, \text{kg} \)</span>,
+- Earth's radius <span class="arithmatex">\( r_{\text{earth}} = 6.378 \times 10^6 \, \text{m} \)</span>,
+- Distance from Earth to Sun <span class="arithmatex">\( r_{\text{sun-earth}} = 1.496 \times 10^{11} \, \text{m} \)</span>,
+- Mass of the Sun <span class="arithmatex">\( M_{\text{sun}} = 1.989 \times 10^{30} \, \text{kg} \)</span>.</p>
+<p>We can now calculate the three cosmic velocities.</p>
+<p><a href="https://colab.research.google.com/drive/1qP4dBedUpvvfWsVxY26c0vqmXayg90XI#scrollTo=G9rPV8yD-MIY">My Colab</a></p>
+<p>```python
+import math</p>
+<h1 id="constants">Constants</h1>
+<p>G = 6.67430e-11  # Gravitational constant in m^3 kg^-1 s^-2
+M_earth = 5.972e24  # Mass of Earth in kg
+r_earth = 6.378e6  # Radius of Earth in meters
+r_sun_earth = 1.496e11  # Distance from Earth to Sun in meters
+M_sun = 1.989e30  # Mass of the Sun in kg</p>
+<h1 id="first-cosmic-velocity-orbital-velocity">First cosmic velocity (Orbital velocity)</h1>
+<p>v1_earth = math.sqrt(G * M_earth / r_earth)</p>
+<h1 id="second-cosmic-velocity-escape-velocity">Second cosmic velocity (Escape velocity)</h1>
+<p>v2_earth = math.sqrt(2 * G * M_earth / r_earth)</p>
+<h1 id="third-cosmic-velocity-escape-from-the-solar-system">Third cosmic velocity (Escape from the Solar System)</h1>
+<p>v3_earth = math.sqrt(3 * G * M_sun / r_sun_earth)</p>
+<p>(v1_earth, v2_earth, v3_earth)</p>
+<h1 id="constants-for-other-celestial-bodies">Constants for other celestial bodies</h1>
+<p>M_moon = 7.342e22  # Mass of the Moon in kg
+r_moon = 1.737e6  # Radius of the Moon in meters</p>
+<p>M_mars = 6.417e23  # Mass of Mars in kg
+r_mars = 3.396e6  # Radius of Mars in meters</p>
+<p>M_jupiter = 1.898e27  # Mass of Jupiter in kg
+r_jupiter = 6.991e7  # Radius of Jupiter in meters</p>
+<h1 id="function-to-calculate-the-velocities">Function to calculate the velocities</h1>
+<p>def cosmic_velocities(M, r):
+    v1 = math.sqrt(G * M / r)
+    v2 = math.sqrt(2 * G * M / r)
+    return v1, v2</p>
+<h1 id="calculate-velocities-for-each-body">Calculate velocities for each body</h1>
+<p>v1_moon, v2_moon = cosmic_velocities(M_moon, r_moon)
+v1_mars, v2_mars = cosmic_velocities(M_mars, r_mars)
+v1_jupiter, v2_jupiter = cosmic_velocities(M_jupiter, r_jupiter)</p>
+<p>(v1_moon, v2_moon), (v1_mars, v2_mars), (v1_jupiter, v2_jupiter)</p>
+<p>import matplotlib.pyplot as plt</p>
+<h1 id="data-for-visualization">Data for visualization</h1>
+<p>bodies = ['Earth', 'Moon', 'Mars', 'Jupiter']
+v1_values = [v1_earth, v1_moon, v1_mars, v1_jupiter]
+v2_values = [v2_earth, v2_moon, v2_mars, v2_jupiter]</p>
+<h1 id="plotting">Plotting</h1>
+<p>fig, ax = plt.subplots(figsize=(10, 6))</p>
+<h1 id="bar-chart-for-the-velocities">Bar chart for the velocities</h1>
+<p>ax.bar(bodies, v1_values, label='First Cosmic Velocity (Orbital)', alpha=0.6, color='blue')
+ax.bar(bodies, v2_values, label='Second Cosmic Velocity (Escape)', alpha=0.6, color='red')</p>
+<h1 id="adding-labels-and-title">Adding labels and title</h1>
+<p>ax.set_xlabel('Celestial Bodies')
+ax.set_ylabel('Velocity (m/s)')
+ax.set_title('Comparison of Cosmic Velocities for Different Celestial Bodies')
+ax.legend()</p>
+<p>plt.show()</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../Problem_1/" title="Problem 1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-<a class="btn btn-neutral float-right" href="../Problem_3/" title="Problem 3">Next <span class="icon icon-circle-arrow-right"></span></a>
+<a class="btn btn-neutral float-left" href="../Problem_1/" title="Problem 1: Orbital Period and Orbital Radius (Kepler's Third Law)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../Problem_3/" title="Problem 3: Trajectories of a Freely Released Payload Near Earth">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
 <div role="contentinfo">

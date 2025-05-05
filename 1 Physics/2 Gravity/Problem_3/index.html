@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 3 - Physics and Mathematics</title>
+<title>Problem 3: Trajectories of a Freely Released Payload Near Earth - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 3";
+        var mkdocs_page_name = "Problem 3: Trajectories of a Freely Released Payload Near Earth";
         var mkdocs_page_input_path = "1 Physics/2 Gravity/Problem_3.md";
         var mkdocs_page_url = null;
       </script>
@@ -54,12 +54,28 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">2 Gravity</a>
 <ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../Problem_1/">Problem 1: Orbital Period and Orbital Radius (Kepler's Third Law)</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
+<li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Escape Velocities and Cosmic Velocities</a>
 </li>
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 3</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 3: Trajectories of a Freely Released Payload Near Earth</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#approach">Approach</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#orbital-mechanics-considerations">Orbital Mechanics Considerations</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#python-code-implementation">Python Code Implementation</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#libraries">Libraries</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +179,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">2 Gravity</li>
-<li class="breadcrumb-item active">Problem 3</li>
+<li class="breadcrumb-item active">Problem 3: Trajectories of a Freely Released Payload Near Earth</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,11 +187,117 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-3">Problem 3</h1>
+<h1 id="problem-3-trajectories-of-a-freely-released-payload-near-earth">Problem 3: Trajectories of a Freely Released Payload Near Earth</h1>
+<h2 id="motivation">Motivation</h2>
+<p>When a payload is released from a moving rocket near Earth, its trajectory is influenced by initial conditions, gravitational forces, and the velocity of the payload. The goal of this simulation is to analyze different potential trajectories of a payload launched from an altitude of 800 km above Earth, under the influence of Earth's gravity.</p>
+<p>We will consider different initial velocities, ranging from 5 km/s to 13 km/s, to understand the relationship between velocity and trajectory type (parabolic, hyperbolic, elliptical).</p>
+<h2 id="approach">Approach</h2>
+<p>The motion of a payload near Earth can be modeled using Newton's law of gravitation:</p>
+<div class="arithmatex">\[
+F = \frac{G M m}{r^2}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( F \)</span> is the gravitational force,
+- <span class="arithmatex">\( G \)</span> is the gravitational constant,
+- <span class="arithmatex">\( M \)</span> is the mass of Earth,
+- <span class="arithmatex">\( m \)</span> is the mass of the payload,
+- <span class="arithmatex">\( r \)</span> is the distance between the center of the Earth and the payload.</p>
+<h3 id="orbital-mechanics-considerations">Orbital Mechanics Considerations</h3>
+<ul>
+<li><strong>Escape velocity</strong>: The minimum velocity needed for an object to break free from Earth's gravity. This is given by:</li>
+</ul>
+<div class="arithmatex">\[
+v_{escape} = \sqrt{\frac{2GM}{r}}
+\]</div>
+<ul>
+<li><strong>Orbital trajectory</strong>: The path followed by an object under the influence of gravity, which can be elliptical, parabolic, or hyperbolic depending on the initial velocity.</li>
+</ul>
+<h2 id="setup">Setup</h2>
+<ol>
+<li>
+<p><strong>Initial Conditions</strong>: </p>
+<ul>
+<li>Payload initial position is 800 km above Earth's surface, so the initial radius <span class="arithmatex">\( r = 800 \text{ km} + 6371 \text{ km} \)</span> (Earth's radius).</li>
+<li>The payload is released with initial velocities of 5 km/s, 5.5 km/s, up to 13 km/s.</li>
+</ul>
+</li>
+<li>
+<p><strong>Simulation</strong>:</p>
+<ul>
+<li>The simulation will compute the trajectory by solving the equations of motion under gravitational influence numerically.</li>
+<li>We will plot the Earth's position as a circle and the payload trajectory for each initial velocity.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="alt text" src="../image-4.png"/>
+<img alt="alt text" src="../image-5.png"/></p>
+<p><a href="https://colab.research.google.com/drive/1qP4dBedUpvvfWsVxY26c0vqmXayg90XI#scrollTo=G9rPV8yD-MIY">My Colab</a></p>
+<h2 id="python-code-implementation">Python Code Implementation</h2>
+<h3 id="libraries">Libraries</h3>
+<p>```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import odeint</p>
+<h1 id="constants">Constants</h1>
+<p>G = 6.67430e-11  # gravitational constant in m^3 kg^-1 s^-2
+M = 5.972e24  # mass of Earth in kg
+R_earth = 6371e3  # radius of Earth in meters
+initial_altitude = 800e3  # altitude above Earth's surface in meters</p>
+<h1 id="function-to-compute-the-derivatives-dxdt-dydt-dvxdt-dvydt">Function to compute the derivatives (dx/dt, dy/dt, dVx/dt, dVy/dt)</h1>
+<p>def equations(state, t, velocity_initial):
+    x, y, vx, vy = state
+    r = np.sqrt(x<strong>2 + y</strong>2)  # distance from Earth's center</p>
+<pre><code># Gravitational force
+F_gravity = -G * M / r**2
+
+# Acceleration components
+ax = F_gravity * x / r
+ay = F_gravity * y / r
+
+return [vx, vy, ax, ay]
+</code></pre>
+<h1 id="initial-conditions-position-and-velocity">Initial conditions (position and velocity)</h1>
+<h1 id="payload-is-released-from-800-km-above-the-earths-surface">Payload is released from 800 km above the Earth's surface</h1>
+<p>r_initial = R_earth + initial_altitude
+theta = np.pi / 2  # position angle (straight up from the surface)
+x_initial = r_initial * np.cos(theta)
+y_initial = r_initial * np.sin(theta)</p>
+<h1 id="different-initial-velocities-in-kms-converted-to-ms">Different initial velocities (in km/s, converted to m/s)</h1>
+<p>velocities = np.linspace(5000, 13000, 9)  # Initial velocities from 5 km/s to 13 km/s
+colors = plt.cm.viridis(np.linspace(0, 1, len(velocities)))  # Color map for plotting</p>
+<h1 id="time-array-for-simulation-0-to-10000-seconds">Time array for simulation (0 to 10,000 seconds)</h1>
+<p>t = np.linspace(0, 10000, 1000)</p>
+<h1 id="plot-setup">Plot setup</h1>
+<p>fig, ax = plt.subplots(figsize=(8, 8))
+ax.set_aspect('equal')
+ax.set_xlabel('x (m)')
+ax.set_ylabel('y (m)')
+ax.set_title('Trajectories of Payloads Near Earth')</p>
+<h1 id="plot-the-earth-as-a-circle">Plot the Earth as a circle</h1>
+<p>earth_circle = plt.Circle((0, 0), R_earth, color='b', label="Earth", alpha=0.5)
+ax.add_artist(earth_circle)</p>
+<h1 id="simulate-for-each-initial-velocity">Simulate for each initial velocity</h1>
+<p>for v in velocities:
+    # Initial velocities in x and y directions (m/s)
+    vx_initial = v * np.cos(theta)
+    vy_initial = v * np.sin(theta)</p>
+<pre><code># Initial state: [x, y, vx, vy]
+state_initial = [x_initial, y_initial, vx_initial, vy_initial]
+
+# Solve the equations of motion using odeint
+trajectory = odeint(equations, state_initial, t, args=(v,))
+
+# Plot the trajectory
+ax.plot(trajectory[:, 0], trajectory[:, 1], label=f'v = {v / 1000} km/s', color=colors[int(v - 5000) // 500])
+</code></pre>
+<h1 id="display-the-legend">Display the legend</h1>
+<p>ax.legend()</p>
+<h1 id="show-the-plot">Show the plot</h1>
+<p>plt.show()</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../Problem_2/" title="Problem 2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-left" href="../Problem_2/" title="Escape Velocities and Cosmic Velocities"><span class="icon icon-circle-arrow-left"></span> Previous</a>
 <a class="btn btn-neutral float-right" href="../../3%20Waves/Problem_1/" title="Problem 1">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
