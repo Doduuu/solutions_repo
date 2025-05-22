@@ -70,3 +70,53 @@ Visualizing this on a 2D water surface offers an intuitive understanding of conc
 ![alt text](image-2.png)
 ![alt text](image-3.png)
 ![alt text](image-4.png)
+
+ [My Colab](https://colab.research.google.com/drive/1qP4dBedUpvvfWsVxY26c0vqmXayg90XI#scrollTo=G9rPV8yD-MIY)
+ 
+
+ ## Python Simulation: Interference from a Square of Sources
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Simulation parameters
+A = 1           # Amplitude
+wavelength = 1  # Wavelength (λ)
+frequency = 1   # Frequency (f)
+k = 2 * np.pi / wavelength    # Wave number
+omega = 2 * np.pi * frequency # Angular frequency
+phi = 0         # Initial phase
+t = 0           # Snapshot in time
+
+# Grid setup
+grid_size = 500
+x = np.linspace(-5, 5, grid_size)
+y = np.linspace(-5, 5, grid_size)
+X, Y = np.meshgrid(x, y)
+
+# Define regular polygon: Square with radius R
+N = 4  # Number of sources (square)
+R = 2  # Radius of circumcircle of square
+
+# Calculate source positions
+angles = np.linspace(0, 2 * np.pi, N, endpoint=False)
+source_positions = [(R * np.cos(a), R * np.sin(a)) for a in angles]
+
+# Superpose waves from all sources
+U = np.zeros_like(X)
+for (x0, y0) in source_positions:
+    r = np.sqrt((X - x0)**2 + (Y - y0)**2)
+    U += A * np.sin(k * r - omega * t + phi)
+
+# Plotting the interference pattern
+plt.figure(figsize=(8, 6))
+plt.imshow(U, extent=(-5, 5, -5, 5), cmap='seismic', origin='lower')
+plt.colorbar(label='Displacement')
+plt.title('Water Surface Interference Pattern from Square Sources')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.scatter(*zip(*source_positions), color='black', marker='o', label='Wave Sources')
+plt.legend()
+plt.grid(False)
+plt.show()
