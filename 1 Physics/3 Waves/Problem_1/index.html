@@ -226,6 +226,46 @@ This simulation clearly demonstrates how interference arises from multiple coher
 <img alt="alt text" src="../image-2.png"/>
 <img alt="alt text" src="../image-3.png"/>
 <img alt="alt text" src="../image-4.png"/></p>
+<p><a href="https://colab.research.google.com/drive/1qP4dBedUpvvfWsVxY26c0vqmXayg90XI#scrollTo=G9rPV8yD-MIY">My Colab</a></p>
+<p>## Python Simulation: Interference from a Square of Sources</p>
+<p>```python
+import numpy as np
+import matplotlib.pyplot as plt</p>
+<h1 id="simulation-parameters">Simulation parameters</h1>
+<p>A = 1           # Amplitude
+wavelength = 1  # Wavelength (λ)
+frequency = 1   # Frequency (f)
+k = 2 * np.pi / wavelength    # Wave number
+omega = 2 * np.pi * frequency # Angular frequency
+phi = 0         # Initial phase
+t = 0           # Snapshot in time</p>
+<h1 id="grid-setup">Grid setup</h1>
+<p>grid_size = 500
+x = np.linspace(-5, 5, grid_size)
+y = np.linspace(-5, 5, grid_size)
+X, Y = np.meshgrid(x, y)</p>
+<h1 id="define-regular-polygon-square-with-radius-r">Define regular polygon: Square with radius R</h1>
+<p>N = 4  # Number of sources (square)
+R = 2  # Radius of circumcircle of square</p>
+<h1 id="calculate-source-positions">Calculate source positions</h1>
+<p>angles = np.linspace(0, 2 * np.pi, N, endpoint=False)
+source_positions = [(R * np.cos(a), R * np.sin(a)) for a in angles]</p>
+<h1 id="superpose-waves-from-all-sources">Superpose waves from all sources</h1>
+<p>U = np.zeros_like(X)
+for (x0, y0) in source_positions:
+    r = np.sqrt((X - x0)<strong>2 + (Y - y0)</strong>2)
+    U += A * np.sin(k * r - omega * t + phi)</p>
+<h1 id="plotting-the-interference-pattern">Plotting the interference pattern</h1>
+<p>plt.figure(figsize=(8, 6))
+plt.imshow(U, extent=(-5, 5, -5, 5), cmap='seismic', origin='lower')
+plt.colorbar(label='Displacement')
+plt.title('Water Surface Interference Pattern from Square Sources')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.scatter(<em>zip(</em>source_positions), color='black', marker='o', label='Wave Sources')
+plt.legend()
+plt.grid(False)
+plt.show()</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
