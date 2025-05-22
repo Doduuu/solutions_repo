@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>Problem 1: Interference Patterns on a Water Surface - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "Problem 1: Interference Patterns on a Water Surface";
         var mkdocs_page_input_path = "1 Physics/3 Waves/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -64,8 +64,14 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">3 Waves</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1: Interference Patterns on a Water Surface</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task-overview">Task Overview</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#wave-equation">Wave Equation</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +169,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">3 Waves</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">Problem 1: Interference Patterns on a Water Surface</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,7 +177,55 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="problem-1-interference-patterns-on-a-water-surface">Problem 1: Interference Patterns on a Water Surface</h1>
+<h2 id="motivation">Motivation</h2>
+<p>Interference patterns emerge when waves from different sources meet and superpose. On a water surface, such patterns are visually compelling and offer a practical demonstration of wave interference: <strong>constructive interference</strong> occurs when waves amplify each other, and <strong>destructive interference</strong> occurs when they cancel each other out.</p>
+<p>This problem helps us analyze these patterns through a physical and mathematical lens, enhancing our understanding of wave superposition in a clear and intuitive way.</p>
+<hr/>
+<h2 id="task-overview">Task Overview</h2>
+<p>You will:</p>
+<ul>
+<li>Select a regular polygon (e.g., square).</li>
+<li>Place identical point wave sources at its vertices.</li>
+<li>Use circular wave equations to simulate the disturbance.</li>
+<li>Superpose the wave functions to generate an interference pattern.</li>
+<li>Visualize the resulting pattern and highlight key features.</li>
+</ul>
+<hr/>
+<h2 id="wave-equation">Wave Equation</h2>
+<p>For a point source at position <span class="arithmatex">\( \vec{r}_0 = (x_0, y_0) \)</span>, the wave at a point <span class="arithmatex">\( \vec{r} = (x, y) \)</span> and time <span class="arithmatex">\( t \)</span> is given by:</p>
+<div class="arithmatex">\[
+u(\vec{r}, t) = A \cdot \sin(k r - \omega t + \phi)
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( A \)</span> = amplitude of wave,
+- <span class="arithmatex">\( k = \frac{2\pi}{\lambda} \)</span> = wave number,
+- <span class="arithmatex">\( \omega = 2\pi f \)</span> = angular frequency,
+- <span class="arithmatex">\( r = |\vec{r} - \vec{r}_0| \)</span> = distance from source to point,
+- <span class="arithmatex">\( \phi \)</span> = initial phase (same for all sources for coherence).</p>
+<hr/>
+<p>Analysis of Interference Pattern
+Constructive Interference: Occurs at points where the waves from all sources arrive in phase (displacements add).</p>
+<p>Destructive Interference: Occurs at points where the waves arrive out of phase, canceling each other out.</p>
+<p>With a square configuration, you'll notice a grid-like interference structure with symmetric patterns centered around the polygon.</p>
+<p>Key Observations:
+The central region typically exhibits strong constructive interference.</p>
+<p>Symmetric fringe patterns appear due to equal path differences from the sources.</p>
+<p>Nodes and antinodes appear periodically depending on the wave parameters.</p>
+<p>Extension Ideas
+Try different polygons (triangle, pentagon, hexagon).</p>
+<p>Vary the wavelength, frequency, or phases.</p>
+<p>Animate over time 
+𝑡
+t to see how the wave pattern evolves dynamically.</p>
+<p>Conclusion
+This simulation clearly demonstrates how interference arises from multiple coherent wave sources. The superposition of circular waves creates complex patterns dependent on geometry and wave properties.</p>
+<p>Visualizing this on a 2D water surface offers an intuitive understanding of concepts like constructive and destructive interference — foundational to fields such as optics, acoustics, and quantum mechanics.</p>
+<p><img alt="alt text" src="../image.png"/>
+<img alt="alt text" src="../image-1.png"/>
+<img alt="alt text" src="../image-2.png"/>
+<img alt="alt text" src="../image-3.png"/>
+<img alt="alt text" src="../image-4.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
